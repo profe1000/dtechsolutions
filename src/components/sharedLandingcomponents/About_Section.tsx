@@ -2,7 +2,7 @@ import { CheckCircleFilled } from "@ant-design/icons";
 
 export default function AboutSection() {
   return (
-    <section className="py-24 bg-white">
+    <section id="about-section" className="py-24 bg-white scroll-mt-32">
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">

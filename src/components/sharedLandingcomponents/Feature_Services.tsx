@@ -4,7 +4,7 @@ import ServiceCard from "./Feature_Service_card";
 
 const MyServices = () => {
     return (
-        <section className="py-24 bg-gray-50">
+        <section id="services-section" className="py-24 bg-gray-50 scroll-mt-32">
 
             <div className="max-w-7xl mx-auto px-6">
 

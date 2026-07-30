@@ -34,14 +34,14 @@ const Navbar = () => {
             </Link>
 
             <Link
-              to="/about"
+              to="/home#about-section"
               className="text-gray-800 hover:text-blue-600 transition duration-300 font-semibold tracking-wide"
             >
               ABOUT
             </Link>
 
             <Link
-              to="/brands"
+              to="/home#services-section"
               className="text-gray-800 hover:text-blue-600 transition duration-300 font-semibold tracking-wide"
             >
               OUR SERVICES
@@ -101,7 +101,7 @@ const Navbar = () => {
           </Link>
 
           <Link
-            to="/about"
+            to="/home#about-section"
             onClick={closeMenu}
             className="text-gray-800 text-3xl font-semibold hover:text-blue-600 transition"
           >
@@ -109,7 +109,7 @@ const Navbar = () => {
           </Link>
 
           <Link
-            to="/brands"
+            to="/home#services-section"
             onClick={closeMenu}
             className="text-gray-800 text-3xl font-semibold hover:text-blue-600 transition"
           >
