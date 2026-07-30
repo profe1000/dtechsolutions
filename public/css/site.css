@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Kanit-regular";
+  src: url("Kanit/Kanit-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-regular";
+  src: url("Poppins/Poppins-Black.ttf");
+}
+
+@font-face {
+  font-family: "Kanit-medium";
+  src: url("Kanit/Kanit-Medium.ttf");
+}
+
+@font-face {
+  font-family: "AlbertSans-regular";
+  src: url("Albert_Sans/static/AlbertSans-Regular.ttf");
+}
+
+.fontKanitRegular {
+  font-family: "Kanit-regular", sans-serif;
+}
+
+.fontPoppinsRegular {
+  font-family: "Poppins-regular", sans-serif;
+}
+
+.fontKanitMedium {
+  font-family: "Kanit-medium", sans-serif;
+}
+
+.fontAlbertSansRegular {
+  font-family: "AlbertSans-regular", sans-serif;
+}

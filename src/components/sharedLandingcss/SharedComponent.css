@@ -1,0 +1,52 @@
+@tailwind base;
+
+@layer base {
+  img {
+    @apply inline;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "swiper/css/autoplay";
+
+
+.ant-image-preview-root .ant-image-preview-mask {
+  background: rgba(2, 6, 23, 0.97) !important;
+}
+
+.ant-image-preview-operations {
+  background: rgba(15, 23, 42, 0.75) !important;
+  backdrop-filter: blur(10px);
+}
+
+.ant-image-preview-switch-left,
+.ant-image-preview-switch-right {
+  background: rgba(15, 23, 42, 0.8) !important;
+}
+
+.ant-image-preview-switch-left:hover,
+.ant-image-preview-switch-right:hover {
+  background: rgba(245, 158, 11, 0.95) !important;
+  color: #fff !important;
+}
+
+.ant-image-preview-close {
+  color: #fbbf24 !important;
+}
+
+.input {
+  @apply w-full rounded-xl border border-gray-300 px-4 py-4 focus:border-blue-950 focus:ring-2 focus:ring-blue-100 outline-none transition;
+}
+
+select.input {
+  @apply bg-white;
+}
+
+textarea.input {
+  @apply pt-4;
+}
