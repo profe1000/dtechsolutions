@@ -1,10 +1,7 @@
-import ContactComp from "../../../components/sharedLandingcomponents/Contact_Comp";
-import FaqComp from "../../../components/sharedLandingcomponents/Faq_Comp";
-import FeatureGallery from "../../../components/sharedLandingcomponents/feature_image";
-import PagerHeaderComp from "../../../components/sharedLandingcomponents/PagesHeaderComp";
-import Fade from "react-reveal/Fade";
+
 import Slide from "react-reveal/Slide";
 import "../landingpages.css";
+import ContactComp from "../../../components/sharedLandingcomponents/Contact_Comp";
 
 export const ContactPage = () => {
   return (
@@ -19,9 +16,6 @@ export const ContactPage = () => {
         <Slide left>
           <ContactComp></ContactComp>
         </Slide>
-        <Fade bottom>
-          <FeatureGallery></FeatureGallery>
-        </Fade>
       </div>
     </>
   );

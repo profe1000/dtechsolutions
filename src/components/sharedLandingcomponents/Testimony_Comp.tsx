@@ -3,117 +3,137 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Navigation,
   Pagination,
-  A11y,
   Autoplay,
+  A11y,
 } from "swiper/modules";
+
 import {
   StarFilled,
-  CommentOutlined,
 } from "@ant-design/icons";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const TestimonyComponent = () => {
-  const testimonies = [
-    {
-      name: "John Doe",
-      text: "The colour guidance made choosing paint simple, and the finish transformed our living room.",
-      image: `${process.env.PUBLIC_URL}/images/testimony/avatar.jfif`,
-    },
-    {
-      name: "Jane Smith",
-      text: "Excellent coverage and a beautiful, long-lasting result. We are very pleased with the quality.",
-      image: `${process.env.PUBLIC_URL}/images/testimony/avatar.jfif`,
-    },
-    {
-      name: "Sam Wilson",
-      text: "Helpful service, quality products, and the right finish for our project. Highly recommended.",
-      image: `${process.env.PUBLIC_URL}/images/testimony/avatar.jfif`,
-    },
-  ];
+const testimonies = [
+  {
+    name: "Michael Johnson",
+    role: "Operations Manager",
+    company: "Prime Logistics Ltd.",
+    image: `${process.env.PUBLIC_URL}/images/testimony/avatar.jfif`,
+    text: "Data Design Tech Solutions completely transformed our data management processes. Their expertise and professionalism helped us improve operational efficiency while keeping our business data secure.",
+  },
+  {
+    name: "Sarah Williams",
+    role: "IT Administrator",
+    company: "Nova Healthcare",
+    image: `${process.env.PUBLIC_URL}/images/testimony/avatar.jfif`,
+    text: "Their backup and disaster recovery solution gave us complete confidence that our critical business information is always protected. The implementation was seamless and the support has been outstanding.",
+  },
+  {
+    name: "David Okoro",
+    role: "Managing Director",
+    company: "Axis Manufacturing",
+    image: `${process.env.PUBLIC_URL}/images/testimony/avatar.jfif`,
+    text: "The consulting and training sessions equipped our team with practical knowledge that immediately improved productivity. Their consultants truly understand enterprise technology.",
+  },
+];
 
+export default function TestimonyComponent() {
   return (
-    <section className="py-20 bg-blue-950">
-      <div className="max-w-6xl mx-auto px-5">
+    <section className="py-24 bg-[#07104D]">
+      <div className="max-w-7xl mx-auto px-6">
+
         {/* Header */}
-        <div className="text-center mb-14">
-          <span className="inline-block px-5 py-2 rounded-full bg-amber-400 text-blue-950 font-bold uppercase tracking-wider">
-            Testimonials
+
+        <div className="text-center mb-16">
+
+          <span className="inline-flex px-5 py-2 rounded-full bg-blue-300 text-blue-700 font-semibold">
+            CLIENT TESTIMONIALS
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-6 fontPoppinsRegular">
-            What Our Customers Say
+          <h2 className="mt-6 text-5xl font-bold text-white">
+            Trusted by Businesses
+            <span className="text-blue-500"> Across Industries</span>
           </h2>
 
-          <p className="mt-5 text-blue-100 max-w-3xl mx-auto text-lg">
-            Discover why homeowners, contractors, and businesses trust our
-            premium paints for exceptional quality and lasting beauty.
+          <p className="mt-6 text-lg text-gray-300 max-w-3xl mx-auto leading-8">
+            We build lasting partnerships by delivering reliable technology
+            solutions, expert support, and measurable business results.
           </p>
+
         </div>
 
         <Swiper
-          modules={[Autoplay, Navigation, Pagination, A11y]}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-          }}
-          loop={true}
+          modules={[Navigation, Pagination, Autoplay, A11y]}
           navigation
           pagination={{ clickable: true }}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          loop
           spaceBetween={30}
           slidesPerView={1}
         >
           {testimonies.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white rounded-3xl overflow-hidden shadow-2xl max-w-4xl mx-auto">
+              <div className="relative bg-white rounded-3xl shadow-2xl max-w-5xl mx-auto overflow-hidden">
 
-                {/* Top Color Bar */}
-                <div className="h-3 bg-gradient-to-r from-amber-400 via-orange-500 to-red-500"></div>
+                {/* Blue Top */}
 
-                <div className="p-10 md:p-14 text-center">
+                <div className="h-2 bg-gradient-to-r from-blue-700 to-cyan-500"></div>
 
-                  {/* Icon */}
-                  <div className="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
-                    <CommentOutlined className="text-4xl text-blue-950" />
+                {/* Quote */}
+
+                {/* <QuoteLeftOutlined className="absolute text-[180px] text-blue-100 right-10 top-10 opacity-30" /> */}
+
+                <div className="relative p-12 md:p-16">
+
+                  <div className="flex flex-col items-center">
+
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-28 h-28 rounded-full border-4 border-blue-600 object-cover shadow-lg"
+                    />
+
+                    <div className="flex mt-6 text-yellow-500 text-xl gap-1">
+                      {Array.from({ length: 5 }).map((_, i) => (
+                        <StarFilled key={i} />
+                      ))}
+                    </div>
+
+                    <p className="mt-8 text-xl text-gray-700 italic leading-10 text-center max-w-3xl">
+                      "{item.text}"
+                    </p>
+
+                    <div className="mt-10 text-center">
+
+                      <h3 className="text-2xl font-bold text-gray-900">
+                        {item.name}
+                      </h3>
+
+                      <p className="text-blue-600 font-semibold mt-1">
+                        {item.role}
+                      </p>
+
+                      <p className="text-gray-500">
+                        {item.company}
+                      </p>
+
+                    </div>
+
                   </div>
 
-                  {/* Customer Image */}
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="w-28 h-28 rounded-full object-cover border-4 border-amber-400 shadow-lg mx-auto mb-6"
-                  />
-
-                  {/* Stars */}
-                  <div className="flex justify-center gap-1 text-yellow-500 text-xl mb-6">
-                    {[...Array(5)].map((_, i) => (
-                      <StarFilled key={i} />
-                    ))}
-                  </div>
-
-                  {/* Testimony */}
-                  <p className="text-xl italic text-gray-700 leading-9 max-w-3xl mx-auto">
-                    "{item.text}"
-                  </p>
-
-                  {/* Name */}
-                  <h4 className="mt-8 text-2xl font-bold text-blue-950">
-                    {item.name}
-                  </h4>
-
-                  <p className="text-amber-500 font-semibold mt-1">
-                    Valued Customer
-                  </p>
                 </div>
+
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
+
       </div>
     </section>
   );
-};
-
-export default TestimonyComponent;
+}
