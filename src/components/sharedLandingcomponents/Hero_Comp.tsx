@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRightOutlined, BgColorsOutlined,SafetyCertificateOutlined, CheckCircleFilled, PlayCircleFilled } from "@ant-design/icons";
+import { ArrowRightOutlined, BgColorsOutlined, SafetyCertificateOutlined, CheckCircleFilled, PlayCircleFilled } from "@ant-design/icons";
+
+
 
 
 const Hero = () => {
@@ -11,140 +13,128 @@ const Hero = () => {
         className="absolute inset-0 opacity-50"
         style={{
           backgroundImage: `
-          linear-gradient(#E5E7EB 1px, transparent 1px),
-          linear-gradient(90deg, #E5E7EB 1px, transparent 1px)
-        `,
+            linear-gradient(#E5E7EB 1px, transparent 1px),
+            linear-gradient(90deg, #E5E7EB 1px, transparent 1px)
+          `,
           backgroundSize: "60px 60px",
         }}
       />
 
       <div className="relative max-w-7xl mx-auto px-6 pt-24 pb-20">
-
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-
-          {/* LEFT */}
+          {/* Left */}
           <div>
+            <span className="inline-flex items-center bg-sky-100 text-sky-700 px-5 py-2 rounded-full font-semibold">
+              Trusted Technology Partner
+            </span>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-[#07104D]">
-              Learn today.
+            <h1 className="mt-8 text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-[#07104D]">
+              Transform Your
               <br />
-              Lead{" "}
+              Business with{" "}
               <span className="text-sky-400 italic">
-                tomorrow.
+                Technology.
               </span>
             </h1>
 
             <p className="mt-8 text-gray-600 text-lg leading-9 max-w-xl">
-              Premier IT and business management training built for
-              professionals who want practical skills, industry
-              certifications and career advancement.
+              Delivering enterprise IT solutions that empower businesses with secure infrastructure, intelligent data management, analytics, and digital transformation.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-5">
-
               <Link
-                to="/courses"
+                to="/services"
                 className="bg-[#07104D] hover:bg-[#0B1968] text-white px-8 py-4 rounded-2xl font-semibold flex items-center gap-3 transition"
               >
                 <PlayCircleFilled />
-                Explore Courses
+                Explore Services
               </Link>
 
               <Link
-                to="/calendar"
+                to="/contact"
                 className="border border-gray-300 bg-white hover:border-[#07104D] hover:text-[#07104D] px-8 py-4 rounded-2xl font-semibold transition"
               >
-                Training Calendar
+                Book a Consultation
               </Link>
-
             </div>
 
-            {/* Stats */}
-
+            {/* Statistics */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mt-20">
-
               <div>
                 <h2 className="text-5xl font-bold text-[#07104D]">
-                  10K+
+                  100+
                 </h2>
                 <p className="text-gray-500 mt-2">
-                  Trained Professionals
+                  Successful Projects
                 </p>
               </div>
 
               <div>
                 <h2 className="text-5xl font-bold text-[#07104D]">
-                  200+
+                  50+
                 </h2>
                 <p className="text-gray-500 mt-2">
-                  Courses Available
+                  Enterprise Clients
                 </p>
               </div>
 
               <div>
                 <h2 className="text-5xl font-bold text-[#07104D]">
-                  95%
+                  24/7
                 </h2>
                 <p className="text-gray-500 mt-2">
-                  Pass Rate
+                  Technical Support
                 </p>
               </div>
 
               <div>
                 <h2 className="text-5xl font-bold text-[#07104D]">
-                  13
+                  10+
                 </h2>
                 <p className="text-gray-500 mt-2">
-                  Years of Excellence
+                  Years of Experience
                 </p>
               </div>
-
             </div>
-
           </div>
 
-          {/* RIGHT */}
-
+          {/* Right */}
           <div className="relative">
-
             <img
-              src={`${process.env.PUBLIC_URL}/hero.png`}
-              alt="Students"
-              className="w-full rounded-3xl object-cover"
+              src={`${process.env.PUBLIC_URL}/images/hero/hero-section2.png`}
+              alt="Data Design Tech Solutions Team"
+              className="w-full h-[550px] rounded-3xl object-cover shadow-2xl"
             />
 
             {/* Floating Card */}
-
             <div className="absolute left-6 right-6 bottom-6 bg-[#07104D] rounded-3xl p-8 shadow-2xl flex flex-col md:flex-row justify-between items-center gap-6">
-
               <div>
-
                 <p className="uppercase text-gray-300 tracking-widest text-sm">
-                  Limited Offer
+                  Trusted Technology Partner
                 </p>
 
-                <h3 className="text-white text-4xl font-bold mt-2">
+                <h3 className="text-white text-3xl md:text-4xl font-bold mt-2 leading-tight">
+                  Driving
                   <span className="text-sky-400">
-                    10% Off
-                  </span>{" "}
-                  — All Courses
+                    {" "}
+                    Innovation{" "}
+                  </span>
+                  Through Data
                 </h3>
 
+                <p className="text-blue-100 mt-3 max-w-md">
+                </p>
               </div>
 
               <Link
-                to="/courses"
-                className="bg-sky-400 hover:bg-sky-500 text-white px-8 py-4 rounded-2xl font-semibold transition"
+                to="/contact"
+                className="bg-sky-400 hover:bg-sky-500 text-white px-8 py-4 rounded-2xl font-semibold transition whitespace-nowrap"
               >
-                Claim Discount
+                Get Started
               </Link>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );
@@ -230,7 +220,7 @@ export function HeroSection() {
 
           <div className="relative bg-white p-4 rounded-[40px] shadow-2xl">
             <img
-              src={`${process.env.PUBLIC_URL}/images/hero/sub_hero1.png`}
+              src={`${process.env.PUBLIC_URL}/images/aboutPage/about-us-03-image-02.png`}
               alt="Professional IT Solutions"
               className="rounded-[30px] w-full h-[650px] object-cover"
             />

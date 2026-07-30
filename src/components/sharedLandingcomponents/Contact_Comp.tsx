@@ -75,7 +75,7 @@ const ContactComp = () => {
     {
       icon: <EnvironmentOutlined />,
       title: "Visit Us",
-      value: "Delta State, Nigeria",
+      value: "Lagos, Nigeria",
     },
     {
       icon: <ClockCircleOutlined />,
@@ -238,7 +238,7 @@ const ContactComp = () => {
           <div className="relative">
 
             <img
-              src={`${process.env.PUBLIC_URL}/images/contact/office.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/home/contact.jpg`}
               alt="Office"
               className="rounded-[32px] h-full object-cover shadow-2xl"
             />

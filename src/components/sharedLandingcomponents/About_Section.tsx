@@ -13,7 +13,7 @@ export default function AboutSection() {
             <div className="absolute -top-6 -left-6 w-48 h-48 rounded-3xl bg-blue-100"></div>
 
             <img
-              src={`${process.env.PUBLIC_URL}/images/about/about.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/aboutPage/image1.jpg`}
               alt="Data Design Tech Solutions"
               className="relative rounded-3xl shadow-2xl w-full h-[550px] object-cover"
             />
