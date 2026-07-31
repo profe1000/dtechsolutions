@@ -101,7 +101,7 @@ const Hero = () => {
           {/* Right */}
           <div className="relative">
             <img
-              src={`${process.env.PUBLIC_URL}/images/hero/hero-section2.png`}
+              src={`${process.env.PUBLIC_URL}/images/hero/hero1.png`}
               alt="Data Design Tech Solutions Team"
               className="w-full h-[550px] rounded-3xl object-cover shadow-2xl"
             />

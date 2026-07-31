@@ -20,7 +20,7 @@ const Footer = () => {
           <div>
 
             <img
-              src={`${process.env.PUBLIC_URL}/logob.png`}
+              src={`${process.env.PUBLIC_URL}/logoTrans.png`}
               alt="Data Design Tech Solutions"
               className="h-20 mb-6"
             />

@@ -18,7 +18,7 @@ const Navbar = () => {
             onClick={closeMenu}
           >
             <img
-              src={`${process.env.PUBLIC_URL}/logob.png`}
+              src={`${process.env.PUBLIC_URL}/logoTrans.png`}
               alt="Logo"
               className="h-20 w-auto object-contain"
             />
