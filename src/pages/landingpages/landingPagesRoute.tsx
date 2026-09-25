@@ -10,6 +10,9 @@ import AboutPage from "./pages/About";
 import ContactPage from "./pages/Contact";
 import { BrandsPage } from "./pages/Brands";
 import ServiceDetails from "./pages/Services-Details";
+import PolicyPage from "./pages/Policy";
+import OurServicesPage from "./pages/OurServices";
+import ServiceCategoryPage from "./pages/ServiceCategory";
 
 const LandingPagesRoute = () => {
   const scrollToTop = ScrollToTop();
@@ -21,6 +24,9 @@ const LandingPagesRoute = () => {
         <Route path="home" element={<HomePage />} />
         <Route path="about" element={<AboutPage />} />
         <Route path="brands" element={<BrandsPage />} />
+        <Route path="policy" element={<PolicyPage />} />
+        <Route path="our-services" element={<OurServicesPage />} />
+        <Route path="our-services/:categoryId" element={<ServiceCategoryPage />} />
         <Route path="services/:id" element={<ServiceDetails />} />
         <Route path="contact" element={<ContactPage />} />
         <Route path="terms_and_condition" element={<TermsAndCondtions />} />

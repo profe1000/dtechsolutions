@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRightOutlined, BgColorsOutlined, SafetyCertificateOutlined, CheckCircleFilled, PlayCircleFilled } from "@ant-design/icons";
+import { BgColorsOutlined, SafetyCertificateOutlined, CheckCircleFilled } from "@ant-design/icons";
 
 
 
@@ -43,16 +43,8 @@ const Hero = () => {
 
             <div className="mt-10 flex flex-wrap gap-5">
               <Link
-                to="/services"
-                className="bg-[#07104D] hover:bg-[#0B1968] text-white px-8 py-4 rounded-2xl font-semibold flex items-center gap-3 transition"
-              >
-                <PlayCircleFilled />
-                Explore Services
-              </Link>
-
-              <Link
                 to="/contact"
-                className="border border-gray-300 bg-white hover:border-[#07104D] hover:text-[#07104D] px-8 py-4 rounded-2xl font-semibold transition"
+                className="bg-[#07104D] hover:bg-[#0B1968] text-white px-8 py-4 rounded-2xl font-semibold transition"
               >
                 Book a Consultation
               </Link>
@@ -178,14 +170,6 @@ export function HeroSection() {
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-5 mt-12">
-            <Link
-              to="/services"
-              className="inline-flex items-center gap-3 bg-sky-400 hover:bg-sky-500 text-blue-950 font-bold px-8 py-4 rounded-xl transition duration-300 shadow-xl"
-            >
-              Explore Services
-              <ArrowRightOutlined />
-            </Link>
-
             <Link
               to="/contact"
               className="inline-flex items-center gap-3 border-2 border-white text-white hover:bg-white hover:text-blue-950 px-8 py-4 rounded-xl font-semibold transition duration-300"

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { serviceCategories } from "../../../utils/serviceCategories";
 import {
   FacebookOutlined,
   InstagramOutlined,
@@ -69,50 +70,16 @@ const Footer = () => {
 
             <ul className="space-y-4">
 
-              <li>
-                <Link
-                  to="/services/data-management"
-                  className="hover:text-white transition"
-                >
-                  Data Management
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  to="/services/backup-recovery"
-                  className="hover:text-white transition"
-                >
-                  Backup & Recovery
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  to="/services/application-support"
-                  className="hover:text-white transition"
-                >
-                  Software Application Support
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  to="/services/consulting-training"
-                  className="hover:text-white transition"
-                >
-                  Consulting & Training
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  to="/services/data-analytics"
-                  className="hover:text-white transition"
-                >
-                  Data Analytics
-                </Link>
-              </li>
+              {serviceCategories.map((category) => (
+                <li key={category.id}>
+                  <Link
+                    to={`/our-services/${category.id}`}
+                    className="hover:text-white transition"
+                  >
+                    {category.title}
+                  </Link>
+                </li>
+              ))}
 
             </ul>
 
@@ -135,14 +102,20 @@ const Footer = () => {
               </li>
 
               <li>
-                <Link to="/home#about-section" className="hover:text-white transition">
+                <Link to="/about" className="hover:text-white transition">
                   About Us
                 </Link>
               </li>
 
               <li>
-                <Link to="/home#services-section" className="hover:text-white transition">
+                <Link to="/our-services" className="hover:text-white transition">
                   Services
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/policy" className="hover:text-white transition">
+                  Policy
                 </Link>
               </li>
 
@@ -189,7 +162,7 @@ const Footer = () => {
                 <span>
                   Your Office Address
                   <br />
-                  City, State
+                  Lekki, Lagos
                   <br />
                   Nigeria
                 </span>

@@ -222,7 +222,7 @@ export default function ServiceDetails() {
             </Link>
 
             <Link
-              to="/services"
+              to="/our-services"
               className="border border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-900 transition"
             >
               View All Services

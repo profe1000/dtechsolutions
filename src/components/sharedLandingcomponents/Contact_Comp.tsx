@@ -75,7 +75,7 @@ const ContactComp = () => {
     {
       icon: <EnvironmentOutlined />,
       title: "Visit Us",
-      value: "Lagos, Nigeria",
+      value: "Lekki, Lagos, Nigeria",
     },
     {
       icon: <ClockCircleOutlined />,
@@ -292,7 +292,7 @@ const ContactComp = () => {
 
           <iframe
             title="Office Location"
-            src="https://maps.google.com/maps?q=Delta%20State,%20Nigeria&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            src="https://maps.google.com/maps?q=Lekki,%20Lagos,%20Nigeria&t=&z=13&ie=UTF8&iwloc=&output=embed"
             width="100%"
             height="550"
             style={{ border: 0 }}

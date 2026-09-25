@@ -1,6 +1,5 @@
 
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import useHashScroll from "../../../hooks/useHashScroll";
 import HeroComp, {
   HeroSection,
 } from "../../../components/sharedLandingcomponents/Hero_Comp";
@@ -14,16 +13,7 @@ import TrustedBrandComp from "../../../components/sharedLandingcomponents/brand_
 import "../landingpages.css";
 
 export const HomePage = () => {
-  const { hash } = useLocation();
-
-  useEffect(() => {
-    if (!hash) return;
-
-    const section = document.querySelector(hash);
-    if (!section) return;
-
-    section.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, [hash]);
+  useHashScroll();
 
   return (
     <>
