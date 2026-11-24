@@ -6,7 +6,8 @@ export const COMPANY = {
   email: "info@datadesigntech.com",
   // CAC registration number, e.g. "RC 1234567". Leave empty until confirmed:
   // it is hidden everywhere while empty.
-  cacNumber: "",
+  cacNumber: "BN 8399787",
+  address: "Plot 37 Femi Kareem Drive, Isheri North GRA, Lagos, Nigeria",
   // Social profile URLs. Icons for empty entries are shown but are not clickable.
   social: {
     facebook: "",

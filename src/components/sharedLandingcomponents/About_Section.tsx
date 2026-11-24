@@ -69,7 +69,7 @@ export default function AboutSection() {
 
             {COMPANY.cacNumber && (
               <p className="mt-6 text-lg text-gray-600 leading-9">
-                Data Design Tech Solutions is a registered company in Nigeria
+                Data Design Tech Solutions is a registered business in Nigeria
                 (CAC Registration No. <strong>{COMPANY.cacNumber}</strong>).
               </p>
             )}

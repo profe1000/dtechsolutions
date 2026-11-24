@@ -160,9 +160,7 @@ const Footer = () => {
                 <EnvironmentOutlined className="mt-1 mr-3 text-blue-500" />
 
                 <span>
-                  Lekki, Lagos
-                  <br />
-                  Nigeria
+                  {COMPANY.address}
                 </span>
 
               </div>
