@@ -33,7 +33,7 @@ export const ServiceCategoryPage = () => {
             className="inline-flex items-center gap-2 mt-10 bg-blue-700 text-white px-8 py-4 rounded-xl hover:bg-blue-800 transition"
           >
             <ArrowLeftOutlined />
-            Back to Our Services
+            Back to What We Offer
           </Link>
         </div>
       </section>
@@ -65,7 +65,7 @@ export const ServiceCategoryPage = () => {
               {serviceCategoryIcons[category.id]}
             </span>
             <span className="text-sm font-semibold tracking-wider text-blue-200">
-              OUR SERVICES
+              WHAT WE OFFER
             </span>
           </div>
 
@@ -98,7 +98,7 @@ export const ServiceCategoryPage = () => {
         <section
           key={offering.id}
           id={offering.id}
-          className={`scroll-mt-28 py-20 ${index % 2 === 0 ? "bg-white" : "bg-gray-50"}`}
+          className={`scroll-mt-44 py-20 ${index % 2 === 0 ? "bg-white" : "bg-gray-50"}`}
         >
           <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
             <div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { COMPANY } from "../../utils/company";
 import emailjs from "@emailjs/browser";
 import {
   MailOutlined,
@@ -65,7 +66,7 @@ const ContactComp = () => {
     {
       icon: <PhoneOutlined />,
       title: "Call Us",
-      value: "+234 XXX XXX XXXX",
+      value: COMPANY.phoneDisplay,
     },
     {
       icon: <MailOutlined />,

@@ -10,6 +10,7 @@ import {
   TeamOutlined,
 } from "@ant-design/icons";
 import useHashScroll from "../../../hooks/useHashScroll";
+import { COMPANY } from "../../../utils/company";
 import "../landingpages.css";
 
 const coreOfferings = [
@@ -69,7 +70,7 @@ export const AboutPage = () => {
       </section>
 
       {/* About Data Design Tech Solutions */}
-      <section id="about-ddts" className="scroll-mt-28 py-24 bg-white">
+      <section id="about-ddts" className="scroll-mt-44 py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <div className="absolute -top-6 -left-6 w-48 h-48 rounded-3xl bg-blue-100"></div>
@@ -101,6 +102,13 @@ export const AboutPage = () => {
               supporting modern technology solutions.
             </p>
 
+            {COMPANY.cacNumber && (
+              <p className="mt-6 text-lg text-gray-600 leading-9">
+                Data Design Tech Solutions is a registered company in Nigeria
+                (CAC Registration No. <strong>{COMPANY.cacNumber}</strong>).
+              </p>
+            )}
+
             <h3 className="mt-10 text-xl font-bold text-slate-900">
               Our core service offerings
             </h3>
@@ -118,7 +126,7 @@ export const AboutPage = () => {
       </section>
 
       {/* Business Philosophy */}
-      <section id="business-philosophy" className="scroll-mt-28 py-24 bg-gray-50">
+      <section id="business-philosophy" className="scroll-mt-44 py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-[#08134D]">

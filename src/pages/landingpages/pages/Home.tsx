@@ -9,7 +9,10 @@ import Slide from "react-reveal/Slide";
 import Zoom from "react-reveal/Zoom";
 import MyServices from "../../../components/sharedLandingcomponents/Feature_Services";
 import AboutSection from "../../../components/sharedLandingcomponents/About_Section";
-import TrustedBrandComp from "../../../components/sharedLandingcomponents/brand_info";
+import {
+  WhyChooseUs,
+  HowWeWork,
+} from "../../../components/sharedLandingcomponents/WhyAndProcess";
 import "../landingpages.css";
 
 export const HomePage = () => {
@@ -30,9 +33,10 @@ export const HomePage = () => {
 
         <MyServices></MyServices>
 
-        <Slide left>
-          <TrustedBrandComp></TrustedBrandComp>
-        </Slide>
+        <WhyChooseUs />
+
+        <HowWeWork />
+
         <Slide left>
           <TestimonyComponent></TestimonyComponent>
         </Slide>

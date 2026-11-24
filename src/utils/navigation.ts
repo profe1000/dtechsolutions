@@ -16,7 +16,7 @@ export interface NavItem {
   to: string;
   // Simple dropdown (About, Policy)
   items?: NavLinkItem[];
-  // Mega menu with grouped columns (Our Services)
+  // Mega menu with grouped columns (What We Offer)
   groups?: NavGroup[];
 }
 
@@ -47,7 +47,7 @@ export const navItems: NavItem[] = [
     ],
   },
   {
-    label: "OUR SERVICES",
+    label: "WHAT WE OFFER",
     to: "/our-services",
     groups: serviceCategories.map((category) => ({
       label: category.title,

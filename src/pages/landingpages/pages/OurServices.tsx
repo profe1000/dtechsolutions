@@ -14,7 +14,7 @@ export const OurServicesPage = () => {
 
         <div className="relative max-w-7xl mx-auto px-6">
           <span className="inline-block bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-semibold">
-            OUR SERVICES
+            WHAT WE OFFER
           </span>
 
           <h1 className="mt-6 text-4xl md:text-6xl font-bold text-white">

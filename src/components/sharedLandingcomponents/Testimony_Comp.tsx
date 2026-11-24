@@ -15,31 +15,18 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const testimonies = [
-  {
-    name: "Michael Johnson",
-    role: "Operations Manager",
-    company: "Prime Logistics Ltd.",
-    image: `${process.env.PUBLIC_URL}/images/testimony/avatar.jfif`,
-    text: "Data Design Tech Solutions completely transformed our data management processes. Their expertise and professionalism helped us improve operational efficiency while keeping our business data secure.",
-  },
-  {
-    name: "Sarah Williams",
-    role: "IT Administrator",
-    company: "Nova Healthcare",
-    image: `${process.env.PUBLIC_URL}/images/testimony/avatar.jfif`,
-    text: "Their backup and disaster recovery solution gave us complete confidence that our critical business information is always protected. The implementation was seamless and the support has been outstanding.",
-  },
-  {
-    name: "David Okoro",
-    role: "Managing Director",
-    company: "Axis Manufacturing",
-    image: `${process.env.PUBLIC_URL}/images/testimony/avatar.jfif`,
-    text: "The consulting and training sessions equipped our team with practical knowledge that immediately improved productivity. Their consultants truly understand enterprise technology.",
-  },
-];
+// Add real client testimonials here. The whole section stays hidden while empty.
+const testimonies: {
+  name: string;
+  role: string;
+  company: string;
+  image: string;
+  text: string;
+}[] = [];
 
 export default function TestimonyComponent() {
+  if (testimonies.length === 0) return null;
+
   return (
     <section className="py-24 bg-[#07104D]">
       <div className="max-w-7xl mx-auto px-6">

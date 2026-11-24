@@ -43,7 +43,7 @@ export const PolicyPage = () => {
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-[280px_1fr] gap-12">
           {/* Table of contents */}
           <aside className="hidden lg:block">
-            <div className="sticky top-36 bg-white rounded-2xl shadow-sm p-6">
+            <div className="sticky top-44 bg-white rounded-2xl shadow-sm p-6">
               <h3 className="text-sm font-bold tracking-wider text-gray-500 mb-4">
                 CONTENTS
               </h3>
@@ -65,7 +65,7 @@ export const PolicyPage = () => {
             {/* Overview */}
             <article
               id="overview"
-              className="scroll-mt-32 bg-white rounded-3xl shadow-sm p-8 md:p-12"
+              className="scroll-mt-44 bg-white rounded-3xl shadow-sm p-8 md:p-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
                 Overview
@@ -103,7 +103,7 @@ export const PolicyPage = () => {
               <article
                 key={section.id}
                 id={section.id}
-                className="scroll-mt-32 bg-white rounded-3xl shadow-sm p-8 md:p-12"
+                className="scroll-mt-44 bg-white rounded-3xl shadow-sm p-8 md:p-12"
               >
                 <div className="flex items-start gap-5">
                   {section.number && (

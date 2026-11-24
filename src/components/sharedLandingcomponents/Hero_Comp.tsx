@@ -28,25 +28,22 @@ const Hero = () => {
               Trusted Technology Partner
             </span>
 
-            <h1 className="mt-8 text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-[#07104D]">
-              Transform Your
-              <br />
-              Business with{" "}
-              <span className="text-sky-400 italic">
-                Technology.
-              </span>
+            <h1 className="mt-8 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-[#07104D]">
+              Secure Data Management &amp;{" "}
+              <span className="text-sky-500">Digital Transformation</span> for
+              Growing Businesses in Lagos, Nigeria
             </h1>
 
             <p className="mt-8 text-gray-600 text-lg leading-9 max-w-xl">
-              Delivering enterprise IT solutions that empower businesses with secure infrastructure, intelligent data management, analytics, and digital transformation.
+              We help enterprises protect, manage, and unlock the value of their data with reliable infrastructure, analytics, and 24/7 support.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-5">
               <Link
                 to="/contact"
-                className="bg-[#07104D] hover:bg-[#0B1968] text-white px-8 py-4 rounded-2xl font-semibold transition"
+                className="inline-block bg-yellow-400 hover:bg-yellow-300 text-[#07104D] text-xl px-12 py-5 rounded-2xl font-bold shadow-xl ring-4 ring-yellow-200 transition whitespace-nowrap"
               >
-                Book a Consultation
+                Book a Free Consultation
               </Link>
             </div>
 
@@ -54,7 +51,7 @@ const Hero = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mt-20">
               <div>
                 <h2 className="text-5xl font-bold text-[#07104D]">
-                  100+
+                  2
                 </h2>
                 <p className="text-gray-500 mt-2">
                   Successful Projects
@@ -63,7 +60,7 @@ const Hero = () => {
 
               <div>
                 <h2 className="text-5xl font-bold text-[#07104D]">
-                  50+
+                  2
                 </h2>
                 <p className="text-gray-500 mt-2">
                   Enterprise Clients
@@ -81,7 +78,7 @@ const Hero = () => {
 
               <div>
                 <h2 className="text-5xl font-bold text-[#07104D]">
-                  10+
+                  2
                 </h2>
                 <p className="text-gray-500 mt-2">
                   Years of Experience
@@ -92,11 +89,13 @@ const Hero = () => {
 
           {/* Right */}
           <div className="relative">
-            <img
-              src={`${process.env.PUBLIC_URL}/images/hero/hero1.png`}
-              alt="Data Design Tech Solutions Team"
-              className="w-full h-[550px] rounded-3xl object-cover shadow-2xl"
-            />
+            <div className="w-full h-[550px] rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-sky-100 to-blue-200">
+              <img
+                src={`${process.env.PUBLIC_URL}/images/hero/hero1.png`}
+                alt="Data Design Tech Solutions Team"
+                className="w-full h-full object-contain object-bottom"
+              />
+            </div>
 
             {/* Floating Card */}
             <div className="absolute left-6 right-6 bottom-6 bg-[#07104D] rounded-3xl p-8 shadow-2xl flex flex-col md:flex-row justify-between items-center gap-6">
@@ -118,12 +117,12 @@ const Hero = () => {
                 </p>
               </div>
 
-              <Link
-                to="/contact"
-                className="bg-sky-400 hover:bg-sky-500 text-white px-8 py-4 rounded-2xl font-semibold transition whitespace-nowrap"
+              <a
+                href="tel:+2347057173516"
+                className="inline-block border-2 border-white text-white hover:bg-white hover:text-[#07104D] text-lg px-8 py-4 rounded-2xl font-bold transition whitespace-nowrap"
               >
-                Get Started
-              </Link>
+                Call 07057173516
+              </a>
             </div>
           </div>
         </div>
@@ -172,27 +171,32 @@ export function HeroSection() {
           <div className="flex flex-wrap gap-5 mt-12">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 border-2 border-white text-white hover:bg-white hover:text-blue-950 px-8 py-4 rounded-xl font-semibold transition duration-300"
+              className="inline-block bg-yellow-400 hover:bg-yellow-300 text-[#07104D] text-xl px-12 py-5 rounded-2xl font-bold shadow-xl ring-4 ring-yellow-200 transition whitespace-nowrap"
             >
-              Get a Free Consultation
+              Book a Free Consultation
             </Link>
           </div>
 
           {/* Statistics */}
-          <div className="grid grid-cols-3 gap-8 mt-16">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-16">
             <div>
-              <h3 className="text-4xl font-bold text-sky-400">100+</h3>
-              <p className="text-blue-100 mt-2">Projects Delivered</p>
+              <h3 className="text-4xl font-bold text-sky-400">2</h3>
+              <p className="text-blue-100 mt-2">Successful Projects</p>
             </div>
 
             <div>
-              <h3 className="text-4xl font-bold text-sky-400">50+</h3>
-              <p className="text-blue-100 mt-2">Business Clients</p>
+              <h3 className="text-4xl font-bold text-sky-400">2</h3>
+              <p className="text-blue-100 mt-2">Enterprise Clients</p>
             </div>
 
             <div>
               <h3 className="text-4xl font-bold text-sky-400">24/7</h3>
               <p className="text-blue-100 mt-2">Technical Support</p>
+            </div>
+
+            <div>
+              <h3 className="text-4xl font-bold text-sky-400">2</h3>
+              <p className="text-blue-100 mt-2">Years of Experience</p>
             </div>
           </div>
         </div>
@@ -204,9 +208,9 @@ export function HeroSection() {
 
           <div className="relative bg-white p-4 rounded-[40px] shadow-2xl">
             <img
-              src={`${process.env.PUBLIC_URL}/images/aboutPage/about-us-03-image-02.png`}
-              alt="Professional IT Solutions"
-              className="rounded-[30px] w-full h-[650px] object-cover"
+              src={`${process.env.PUBLIC_URL}/images/aboutPage/image1.jpg`}
+              alt="Our team collaborating with clients"
+              className="rounded-[30px] w-full h-[550px] object-cover"
             />
 
             {/* Floating Card */}

@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { serviceCategories } from "../../../utils/serviceCategories";
+import { COMPANY } from "../../../utils/company";
+import { openCookieSettings } from "../../sharedLandingcomponents/CookieConsent";
 import {
   FacebookOutlined,
   InstagramOutlined,
@@ -33,29 +35,27 @@ const Footer = () => {
               solutions.
             </p>
 
-            <div className="flex mt-8 space-x-4">
+            <h3 className="text-white text-xl font-semibold mt-8 mb-4">
+              Connect with Us
+            </h3>
 
-              <a
-                href="#"
-                className="w-11 h-11 rounded-full border border-gray-700 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition"
-              >
-                <FacebookOutlined />
-              </a>
-
-              <a
-                href="#"
-                className="w-11 h-11 rounded-full border border-gray-700 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition"
-              >
-                <InstagramOutlined />
-              </a>
-
-              <a
-                href="#"
-                className="w-11 h-11 rounded-full border border-gray-700 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition"
-              >
-                <LinkedinOutlined />
-              </a>
-
+            <div className="flex space-x-4">
+              {[
+                { label: "Facebook", icon: <FacebookOutlined />, url: COMPANY.social.facebook },
+                { label: "Instagram", icon: <InstagramOutlined />, url: COMPANY.social.instagram },
+                { label: "LinkedIn", icon: <LinkedinOutlined />, url: COMPANY.social.linkedin },
+              ].map((item) => (
+                <a
+                  key={item.label}
+                  href={item.url || undefined}
+                  target={item.url ? "_blank" : undefined}
+                  rel="noopener noreferrer"
+                  aria-label={item.label}
+                  className="w-11 h-11 rounded-full border border-gray-700 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition"
+                >
+                  {item.icon}
+                </a>
+              ))}
             </div>
 
           </div>
@@ -65,7 +65,7 @@ const Footer = () => {
           <div>
 
             <h3 className="text-white text-xl font-semibold mb-6">
-              Our Services
+              What We Offer
             </h3>
 
             <ul className="space-y-4">
@@ -131,7 +131,7 @@ const Footer = () => {
               to="/contact"
               className="inline-block mt-8 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full text-white font-medium transition"
             >
-              Request Consultation
+              Book a Free Consultation
             </Link>
 
           </div>
@@ -148,20 +148,18 @@ const Footer = () => {
 
               <div className="flex items-start">
                 <MailOutlined className="mt-1 mr-3 text-blue-500" />
-                <span>info@datadesigntech.com</span>
+                <a href={`mailto:${COMPANY.email}`} className="hover:text-white transition">{COMPANY.email}</a>
               </div>
 
               <div className="flex items-start">
                 <PhoneOutlined className="mt-1 mr-3 text-blue-500" />
-                <span>+234 XXX XXX XXXX</span>
+                <a href={COMPANY.phoneHref} className="hover:text-white transition">{COMPANY.phoneDisplay}</a>
               </div>
 
               <div className="flex items-start">
                 <EnvironmentOutlined className="mt-1 mr-3 text-blue-500" />
 
                 <span>
-                  Your Office Address
-                  <br />
                   Lekki, Lagos
                   <br />
                   Nigeria
@@ -194,6 +192,7 @@ const Footer = () => {
             <p className="text-gray-500 text-center lg:text-left">
               © {new Date().getFullYear()} Data Design Tech Solutions. All
               Rights Reserved.
+              {COMPANY.cacNumber && <> CAC Reg. No: {COMPANY.cacNumber}.</>}
             </p>
 
             <p className="text-center text-lg md:text-xl font-semibold text-white">
@@ -203,6 +202,25 @@ const Footer = () => {
               </span>
             </p>
 
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 mt-8 text-sm">
+            <Link to="/privacy-policy" className="hover:text-white transition">
+              Privacy Policy
+            </Link>
+            <Link to="/terms-of-use" className="hover:text-white transition">
+              Terms of Use
+            </Link>
+            <Link to="/privacy-policy#cookies" className="hover:text-white transition">
+              Cookie Policy
+            </Link>
+            <button
+              type="button"
+              onClick={openCookieSettings}
+              className="hover:text-white transition"
+            >
+              Cookie Settings
+            </button>
           </div>
 
         </div>

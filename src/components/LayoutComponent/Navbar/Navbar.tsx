@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { DownOutlined } from "@ant-design/icons";
+import { PhoneOutlined } from "@ant-design/icons";
 import { navItems, NavItem } from "../../../utils/navigation";
+import { COMPANY } from "../../../utils/company";
+import { primaryCtaClass } from "../../sharedLandingcomponents/WhyAndProcess";
 
 const topLinkClass =
   "flex items-center gap-1.5 text-gray-800 hover:text-blue-600 transition duration-300 font-semibold tracking-wide";
@@ -35,8 +38,20 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Navbar */}
-      <nav className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-md">
+      {/* Top info bar + Navbar */}
+      <div className="fixed top-0 left-0 w-full z-50">
+      <div className="bg-[#07104D] text-white text-xs sm:text-sm h-9 flex items-center">
+        <div className="max-w-7xl mx-auto px-6 w-full flex items-center justify-between gap-4">
+          <span className="font-semibold tracking-wide">
+            {COMPANY.cacNumber ? `CAC Reg. No: ${COMPANY.cacNumber}` : COMPANY.name}
+          </span>
+          <a href={COMPANY.phoneHref} className="flex items-center gap-2 hover:text-sky-300 transition">
+            <PhoneOutlined />
+            {COMPANY.phoneDisplay}
+          </a>
+        </div>
+      </div>
+      <nav className="relative w-full bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-md">
         <div className="relative max-w-7xl mx-auto px-6 h-28 flex items-center justify-between">
           {/* Logo */}
           <Link to="/home" className="flex items-center" onClick={closeMenu}>
@@ -154,6 +169,7 @@ const Navbar = () => {
           </button>
         </div>
       </nav>
+      </div>
 
       {/* Mobile Menu */}
       <div
@@ -161,7 +177,7 @@ const Navbar = () => {
           showMenu ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
         }`}
       >
-        <div className="pt-32 pb-12 px-6 max-w-xl mx-auto divide-y divide-gray-100">
+        <div className="pt-44 pb-12 px-6 max-w-xl mx-auto divide-y divide-gray-100">
           {navItems.map((item) => {
             const hasChildren = Boolean(item.items || item.groups);
             const expanded = openSection === item.label;
@@ -233,11 +249,27 @@ const Navbar = () => {
               </div>
             );
           })}
+
+          <div className="pt-8 flex flex-col gap-4">
+            <Link
+              to="/contact"
+              onClick={closeMenu}
+              className={`${primaryCtaClass} text-center`}
+            >
+              Book a Free Consultation
+            </Link>
+            <a
+              href={COMPANY.phoneHref}
+              className="text-center text-gray-700 font-semibold"
+            >
+              Call {COMPANY.phoneDisplay}
+            </a>
+          </div>
         </div>
       </div>
 
-      {/* Spacer */}
-      <div className="h-28"></div>
+      {/* Spacer (info bar 36px + nav 112px) */}
+      <div className="h-[148px]"></div>
     </>
   );
 };

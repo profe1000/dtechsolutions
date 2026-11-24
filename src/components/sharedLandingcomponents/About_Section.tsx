@@ -1,8 +1,9 @@
 import { CheckCircleFilled } from "@ant-design/icons";
+import { COMPANY } from "../../utils/company";
 
 export default function AboutSection() {
   return (
-    <section id="about-section" className="py-24 bg-white scroll-mt-32">
+    <section id="about-section" className="py-24 bg-white scroll-mt-44">
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -12,11 +13,13 @@ export default function AboutSection() {
 
             <div className="absolute -top-6 -left-6 w-48 h-48 rounded-3xl bg-blue-100"></div>
 
-            <img
-              src={`${process.env.PUBLIC_URL}/images/aboutPage/image1.jpg`}
-              alt="Data Design Tech Solutions"
-              className="relative rounded-3xl shadow-2xl w-full h-[550px] object-cover"
-            />
+            <div className="relative rounded-3xl shadow-2xl w-full h-[550px] bg-gradient-to-br from-blue-100 to-sky-200 overflow-hidden">
+              <img
+                src={`${process.env.PUBLIC_URL}/images/hero/hero-section2.png`}
+                alt="Data Design Tech Solutions team"
+                className="w-full h-full object-contain object-bottom"
+              />
+            </div>
 
             <div className="absolute bottom-8 left-8 bg-white rounded-2xl shadow-xl px-8 py-6">
 
@@ -63,6 +66,13 @@ export default function AboutSection() {
               informed decision-making, operational excellence, and sustainable
               growth.
             </p>
+
+            {COMPANY.cacNumber && (
+              <p className="mt-6 text-lg text-gray-600 leading-9">
+                Data Design Tech Solutions is a registered company in Nigeria
+                (CAC Registration No. <strong>{COMPANY.cacNumber}</strong>).
+              </p>
+            )}
 
             {/* Features */}
 

@@ -16,7 +16,7 @@ export interface ServiceCategory {
 export const serviceCategories: ServiceCategory[] = [
   {
     id: "consulting-training",
-    title: "Consulting & Training Services",
+    title: "Training Services",
     tagline: "Build expertise in the platforms that power your business.",
     summary:
       "Expert consulting and hands-on training that equips your team to design, run, and optimize modern database and cloud platforms.",

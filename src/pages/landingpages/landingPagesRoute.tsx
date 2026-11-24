@@ -30,6 +30,8 @@ const LandingPagesRoute = () => {
         <Route path="services/:id" element={<ServiceDetails />} />
         <Route path="contact" element={<ContactPage />} />
         <Route path="terms_and_condition" element={<TermsAndCondtions />} />
+        <Route path="terms-of-use" element={<TermsAndCondtions />} />
+        <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="privacy_policy" element={<PrivacyPolicy />} />
         <Route path="*" element={<Nopage />} />
       </Route>
